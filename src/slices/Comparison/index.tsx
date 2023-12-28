@@ -114,7 +114,7 @@ const Comparison = ({ slice }: ComparisonProps): JSX.Element => {
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
-        <div className="header-div">
+        <div className="header-div mb-8 md:mb-16">
           <PrismicRichText
             field={title}
             components={components({
@@ -168,7 +168,7 @@ const Comparison = ({ slice }: ComparisonProps): JSX.Element => {
           {/* <PrismicNextImage field={slice.primary.image} className="py-4" /> */}
         </div>
         <div className="mx-[0rem] mobile:mx-[2rem] md:mx-[8rem]">
-          <div className="cta-div mx-auto max-w-xl ">
+          <div className="cta-div mt-7 md:mt-14 mx-auto max-w-xl ">
             {cta_text?.length && (
               <Button cta_style={cta_style} cta_link={cta_link} iframe={iframe}>
                 {cta_text}
