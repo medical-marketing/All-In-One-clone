@@ -2,7 +2,7 @@ import type { Metadata, ResolvingMetadata, Viewport } from "next";
 
 import "./globals.css";
 import clsx from "clsx";
-import { StyledBody } from "@/app/ClientComponents";
+import { StyledBody } from "@/app/ServerSideValidation";
 
 import { Nunito, Nunito_Sans } from "next/font/google";
 
@@ -76,7 +76,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(body.variable, display.variable)}>
-        <StyledBody $strongColor={bold_text_color}>
+        <StyledBody bold_text_color={bold_text_color}>
           <Providers>
             <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
             {children}

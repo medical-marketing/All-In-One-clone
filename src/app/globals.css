@@ -29,3 +29,7 @@ ul>li::before {
     border-radius: 50px;
     color: white;
 }
+
+strong {
+    color: #000000;
+}
