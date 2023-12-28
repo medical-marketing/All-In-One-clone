@@ -2,6 +2,7 @@ import type { Metadata, ResolvingMetadata, Viewport } from "next";
 
 import "./globals.css";
 import clsx from "clsx";
+import { StyledBody } from "@/app/ClientComponents";
 
 import { Nunito, Nunito_Sans } from "next/font/google";
 
@@ -65,15 +66,22 @@ export default async function RootLayout({
 }) {
   const settings = await getSettings();
 
-  const { primary_color, secondary_color, gtm_id: GTM_ID } = settings.data;
+  const {
+    primary_color,
+    secondary_color,
+    bold_text_color,
+    gtm_id: GTM_ID,
+  } = settings.data;
 
   return (
     <html lang="en">
       <body className={clsx(body.variable, display.variable)}>
-        <Providers>
-          <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
-          {children}
-        </Providers>
+        <StyledBody $strongColor={bold_text_color}>
+          <Providers>
+            <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
+            {children}
+          </Providers>
+        </StyledBody>
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>

@@ -1,5 +1,5 @@
 {
-  "repositoryName": "all-in-one",
+  "repositoryName": "all-in-one-test",
   "adapter": "@slicemachine/adapter-next",
   "libraries": ["./src/slices"],
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"

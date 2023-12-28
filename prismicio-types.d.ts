@@ -473,6 +473,17 @@ interface SettingsDocumentData {
   secondary_color: prismic.ColorField;
 
   /**
+   * Bold Text Color field in *Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.bold_text_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  bold_text_color: prismic.ColorField;
+
+  /**
    * Default CTA Style field in *Settings*
    *
    * - **Field Type**: Select

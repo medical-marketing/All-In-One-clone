@@ -50,6 +50,13 @@
           "placeholder": ""
         }
       },
+      "bold_text_color": {
+        "type": "Color",
+        "config": {
+          "label": "Bold Text Color",
+          "placeholder": ""
+        }
+      },
       "default_cta_style": {
         "type": "Select",
         "config": {
@@ -100,14 +107,6 @@
         "config": {
           "label": "GTM_ID",
           "placeholder": ""
-        }
-      },
-      "default_iframe": {
-        "type": "Link",
-        "config": {
-          "label": "default iFrame",
-          "select": "document",
-          "customtypes": ["iframe"]
         }
       },
       "block_indexing_by_search_engines": {
