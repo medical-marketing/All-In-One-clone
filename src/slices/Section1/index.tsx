@@ -60,6 +60,22 @@ const components: componentsType = ({ title_color, text_color }) => {
         {children}
       </Paragraph>
     ),
+    listItem: ({ children }) => (
+      <li
+        className="text-lg md:text-xl text-black-500 mt-8 mb-10"
+        color={text_color}
+      >
+        {children}
+      </li>
+    ),
+    oListItem: ({ children }) => (
+      <li
+        className="text-lg md:text-xl text-black-500 mt-8 mb-10"
+        color={text_color}
+      >
+        {children}
+      </li>
+    ),
   };
 };
 
