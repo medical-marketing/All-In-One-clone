@@ -182,6 +182,16 @@
 				"__TYPE__": "FieldContent",
 				"value": "Bordered",
 				"type": "Select"
+			},
+			"cta_text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#f57af0",
+				"type": "Color"
+			},
+			"cta_background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#2d6655",
+				"type": "Color"
 			}
 		},
 		"items": []

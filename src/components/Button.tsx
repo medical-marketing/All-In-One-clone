@@ -3,37 +3,54 @@ import Iframe from "@/components/Iframe";
 import clsx from "clsx";
 import { PrismicNextLink } from "@prismicio/next";
 import { getSettings } from "@/app/utils";
+import { ColorField } from "@prismicio/client";
 
 type getButtonStylesProps = {
   variant: string;
-  cta_text_color?: string;
-  cta_background_color?: string;
+  cta_text_color?: ColorField;
+  default_cta_text_color?: string;
+  cta_background_color?: ColorField;
+  default_cta_background_color?: string;
 };
 
 function getButtonStyles({
   variant = "Filled",
   cta_text_color,
   cta_background_color,
+  default_cta_text_color,
+  default_cta_background_color,
 }: getButtonStylesProps) {
+  console.log(
+    variant,
+    cta_text_color,
+    default_cta_text_color,
+    cta_background_color,
+    default_cta_background_color
+  );
   if (variant == "Filled") {
     return {
-      color: cta_text_color || "rgb(250,255,255)",
-      backgroundColor: cta_background_color || "rgb(234,179,8)",
+      color: cta_text_color || default_cta_text_color || "rgb(250,255,255)",
+      backgroundColor:
+        cta_background_color ||
+        default_cta_background_color ||
+        "rgb(234,179,8)",
     };
   } else {
     return {
-      color: cta_text_color || "#000",
+      color: cta_text_color || default_cta_text_color || "#000",
       backgroundColor: "transparent",
       border: "4px solid",
       borderRadius: "10px",
-      borderColor: cta_background_color || "#000",
+      borderColor:
+        cta_background_color || default_cta_background_color || "#000",
     };
   }
 }
 
 type ButtonProps = {
   cta_style?: string;
-
+  cta_text_color?: ColorField;
+  cta_background_color?: ColorField;
   cta_link: any;
   iframe: any;
   className?: any;
@@ -46,11 +63,13 @@ export default async function Button({
   iframe,
   className,
   children,
+  cta_text_color,
+  cta_background_color,
 }: ButtonProps) {
   const settings = await getSettings();
   const {
-    cta_background_color,
-    cta_text_color,
+    cta_background_color: default_cta_background_color,
+    cta_text_color: default_cta_text_color,
     default_iframe,
     default_cta_style,
   } = settings.data;
@@ -62,7 +81,12 @@ export default async function Button({
 
   const theButtonStyles = getButtonStyles({
     variant: _variant,
-    ...{ cta_background_color, cta_text_color },
+    ...{
+      cta_background_color,
+      default_cta_background_color,
+      cta_text_color,
+      default_cta_text_color,
+    },
   });
 
   return (

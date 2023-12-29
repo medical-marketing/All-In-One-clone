@@ -33,7 +33,7 @@ type Props = {
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSettings();
 
-  console.log("settings", settings);
+  // console.log("settings", settings);
 
   const {
     meta_title,

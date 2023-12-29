@@ -204,6 +204,16 @@
 				"__TYPE__": "FieldContent",
 				"value": "Default",
 				"type": "Select"
+			},
+			"cta_text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#3a03e2",
+				"type": "Color"
+			},
+			"cta_background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#881715",
+				"type": "Color"
 			}
 		},
 		"items": [

@@ -35,6 +35,33 @@
             "placeholder": ""
           }
         },
+        "cta_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "CTA Text Color",
+            "placeholder": ""
+          }
+        },
+        "cta_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "CTA Background Color",
+            "placeholder": ""
+          }
+        },
+        "cta_style": {
+          "type": "Select",
+          "config": {
+            "label": "CTA Style",
+            "placeholder": "",
+            "options": [
+              "Default",
+              "Filled",
+              "Bordered"
+            ],
+            "default_value": "Default"
+          }
+        },
         "iframe": {
           "type": "Link",
           "config": {
@@ -51,19 +78,6 @@
             "label": "CTA Link",
             "placeholder": "",
             "select": null
-          }
-        },
-        "cta_style": {
-          "type": "Select",
-          "config": {
-            "label": "CTA Style",
-            "placeholder": "",
-            "options": [
-              "Default",
-              "Filled",
-              "Bordered"
-            ],
-            "default_value": "Default"
           }
         },
         "after_cta_text": {
@@ -186,6 +200,33 @@
             "placeholder": ""
           }
         },
+        "cta_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "CTA Text Color",
+            "placeholder": ""
+          }
+        },
+        "cta_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "CTA Background Color",
+            "placeholder": ""
+          }
+        },
+        "cta_style": {
+          "type": "Select",
+          "config": {
+            "label": "CTA Style",
+            "placeholder": "",
+            "options": [
+              "Default",
+              "Filled",
+              "Bordered"
+            ],
+            "default_value": "Default"
+          }
+        },
         "iframe": {
           "type": "Link",
           "config": {
@@ -202,19 +243,6 @@
             "label": "CTA Link",
             "placeholder": "",
             "select": null
-          }
-        },
-        "cta_style": {
-          "type": "Select",
-          "config": {
-            "label": "CTA Style",
-            "placeholder": "",
-            "options": [
-              "Default",
-              "Filled",
-              "Bordered"
-            ],
-            "default_value": "Default"
           }
         },
         "after_cta_text": {

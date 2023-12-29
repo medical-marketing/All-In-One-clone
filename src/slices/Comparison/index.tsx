@@ -82,6 +82,8 @@ const Comparison = ({ slice }: ComparisonProps): JSX.Element => {
       background_of_small_images,
       after_cta_text,
       cta_text,
+      cta_text_color,
+      cta_background_color,
       cta_link,
       cta_style,
       iframe,
@@ -170,7 +172,13 @@ const Comparison = ({ slice }: ComparisonProps): JSX.Element => {
         <div className="mx-[0rem] mobile:mx-[2rem] md:mx-[8rem]">
           <div className="cta-div mt-7 md:mt-14 mx-auto max-w-xl ">
             {cta_text?.length && (
-              <Button cta_style={cta_style} cta_link={cta_link} iframe={iframe}>
+              <Button
+                cta_text_color={cta_text_color}
+                cta_background_color={cta_background_color}
+                cta_style={cta_style}
+                cta_link={cta_link}
+                iframe={iframe}
+              >
                 {cta_text}
               </Button>
             )}

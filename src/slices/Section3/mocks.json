@@ -190,6 +190,22 @@
 							"value": "Default",
 							"type": "Select"
 						}
+					],
+					[
+						"cta_text_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#f5c265",
+							"type": "Color"
+						}
+					],
+					[
+						"cta_background_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#82f353",
+							"type": "Color"
+						}
 					]
 				]
 			},
@@ -379,6 +395,22 @@
 							"__TYPE__": "FieldContent",
 							"value": "Bordered",
 							"type": "Select"
+						}
+					],
+					[
+						"cta_text_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#285b46",
+							"type": "Color"
+						}
+					],
+					[
+						"cta_background_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#df3356",
+							"type": "Color"
 						}
 					]
 				]

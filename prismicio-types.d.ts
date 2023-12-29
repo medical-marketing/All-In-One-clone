@@ -633,6 +633,26 @@ export interface ComparisonSliceDefaultPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
+   * CTA Text Color field in *Comparison → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.primary.cta_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_text_color: prismic.ColorField;
+
+  /**
+   * CTA Background Color field in *Comparison → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: comparison.primary.cta_background_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_background_color: prismic.ColorField;
+
+  /**
    * iFrame field in *Comparison → Primary*
    *
    * - **Field Type**: Content Relationship
@@ -872,6 +892,26 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   cta_text: prismic.KeyTextField;
+
+  /**
+   * CTA Text Color field in *Hero → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.cta_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_text_color: prismic.ColorField;
+
+  /**
+   * CTA Background Color field in *Hero → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.cta_background_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_background_color: prismic.ColorField;
 
   /**
    * iFrame field in *Hero → Primary*
@@ -1182,6 +1222,26 @@ export interface Section1SliceDefaultPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
+   * CTA Text Color field in *Section1 → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.cta_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_text_color: prismic.ColorField;
+
+  /**
+   * CTA Background Color field in *Section1 → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section1.primary.cta_background_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_background_color: prismic.ColorField;
+
+  /**
    * iFrame field in *Section1 → Primary*
    *
    * - **Field Type**: Content Relationship
@@ -1328,6 +1388,37 @@ export interface Section2SliceDefaultPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
+   * CTA Text Color field in *Section2 → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.cta_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_text_color: prismic.ColorField;
+
+  /**
+   * CTA Background Color field in *Section2 → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.cta_background_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_background_color: prismic.ColorField;
+
+  /**
+   * CTA Style field in *Section2 → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Default
+   * - **API ID Path**: section2.primary.cta_style
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
+
+  /**
    * iFrame field in *Section2 → Primary*
    *
    * - **Field Type**: Content Relationship
@@ -1346,17 +1437,6 @@ export interface Section2SliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
-
-  /**
-   * CTA Style field in *Section2 → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: Default
-   * - **API ID Path**: section2.primary.cta_style
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
 
   /**
    * After CTA Text field in *Section2 → Primary*
@@ -1502,6 +1582,37 @@ export interface Section2SlicePointBlocksPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
+   * CTA Text Color field in *Section2 → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.cta_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_text_color: prismic.ColorField;
+
+  /**
+   * CTA Background Color field in *Section2 → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section2.primary.cta_background_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_background_color: prismic.ColorField;
+
+  /**
+   * CTA Style field in *Section2 → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Default
+   * - **API ID Path**: section2.primary.cta_style
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
+
+  /**
    * iFrame field in *Section2 → Primary*
    *
    * - **Field Type**: Content Relationship
@@ -1520,17 +1631,6 @@ export interface Section2SlicePointBlocksPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
-
-  /**
-   * CTA Style field in *Section2 → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: Default
-   * - **API ID Path**: section2.primary.cta_style
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
 
   /**
    * After CTA Text field in *Section2 → Primary*
@@ -1721,6 +1821,26 @@ export interface Section3SliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   cta_text: prismic.KeyTextField;
+
+  /**
+   * CTA Text Color field in *Section3 → Items*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].cta_text_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_text_color: prismic.ColorField;
+
+  /**
+   * CTA Background Color field in *Section3 → Items*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: section3.items[].cta_background_color
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cta_background_color: prismic.ColorField;
 
   /**
    * iFrame field in *Section3 → Items*

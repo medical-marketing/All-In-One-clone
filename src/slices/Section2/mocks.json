@@ -167,6 +167,16 @@
 				"__TYPE__": "FieldContent",
 				"value": "Bordered",
 				"type": "Select"
+			},
+			"cta_text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#739589",
+				"type": "Color"
+			},
+			"cta_background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#53d1d9",
+				"type": "Color"
 			}
 		},
 		"items": [
@@ -612,6 +622,16 @@
 				"__TYPE__": "FieldContent",
 				"value": "Default",
 				"type": "Select"
+			},
+			"cta_text_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#62e6ee",
+				"type": "Color"
+			},
+			"cta_background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#1419da",
+				"type": "Color"
 			}
 		},
 		"items": [
