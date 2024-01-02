@@ -653,6 +653,17 @@ export interface ComparisonSliceDefaultPrimary {
   cta_background_color: prismic.ColorField;
 
   /**
+   * CTA Style field in *Comparison → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Default
+   * - **API ID Path**: comparison.primary.cta_style
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
+
+  /**
    * iFrame field in *Comparison → Primary*
    *
    * - **Field Type**: Content Relationship
@@ -671,17 +682,6 @@ export interface ComparisonSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
-
-  /**
-   * CTA Style field in *Comparison → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: Default
-   * - **API ID Path**: comparison.primary.cta_style
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  cta_style: prismic.SelectField<"Default" | "Filled" | "Bordered", "filled">;
 
   /**
    * After CTA Text field in *Comparison → Primary*
