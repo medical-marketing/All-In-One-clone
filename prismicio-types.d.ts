@@ -993,6 +993,16 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   background_of_small_images: prismic.ContentRelationshipField<"background_of_small_images">;
+
+  /**
+   * Phone Number Input Webhook URL field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.phone_number_input_webhook_url
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_number_input_webhook_url: prismic.KeyTextField;
 }
 
 /**

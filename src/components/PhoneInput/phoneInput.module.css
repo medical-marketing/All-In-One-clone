@@ -1,0 +1,35 @@
+.shake {
+  animation: Shake 6s linear infinite;
+  animation-delay: 3000ms;
+  transform-origin: bottom;
+}
+.input::selection {
+  background-color: transparent;
+
+  user-select: none !important;
+}
+
+@keyframes Shake {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  2.5% {
+    transform: rotate(-12deg);
+  }
+
+  5% {
+    transform: rotate(8deg);
+  }
+
+  7.5% {
+    transform: rotate(-10deg);
+  }
+
+  10% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}

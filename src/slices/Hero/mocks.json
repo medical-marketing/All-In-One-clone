@@ -214,6 +214,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "#881715",
 				"type": "Color"
+			},
+			"phone_number_input_webhook_url": {
+				"__TYPE__": "FieldContent",
+				"value": "floor",
+				"type": "Text"
 			}
 		},
 		"items": [

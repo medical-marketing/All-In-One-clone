@@ -175,6 +175,13 @@
               "background_of_small_images"
             ]
           }
+        },
+        "phone_number_input_webhook_url": {
+          "type": "Text",
+          "config": {
+            "label": "Phone Number Input Webhook URL",
+            "placeholder": ""
+          }
         }
       },
       "items": {

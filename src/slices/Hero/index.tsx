@@ -4,6 +4,7 @@ import Bounded from "@/components/Bounded";
 import Button from "@/components/Button";
 import Heading from "@/components/Heading";
 import Paragraph from "@/components/Paragraph";
+import PhoneInput from "@/components/PhoneInput/PhoneInput";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import {
@@ -171,6 +172,11 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
               color={slice.primary.sub_header_color}
             />
           </div>
+          {slice.primary.phone_number_input_webhook_url?.length && (
+            <PhoneInput
+              webhook_url={slice.primary.phone_number_input_webhook_url}
+            />
+          )}
         </div>
         <div className="key-points-div mt-8 flex justify-center gap-8 flex-wrap">
           {slice.items.map(({ key_point_image }, index) => (
