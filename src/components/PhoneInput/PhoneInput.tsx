@@ -1,10 +1,13 @@
 "use client";
-import { ReactEventHandler, useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import styles from "./phoneInput.module.css";
 import clsx from "clsx";
 import ArrowLottieAnimation from "./ArrowLottieAnimation";
 import { ColorField, KeyTextField } from "@prismicio/client";
+import { PrismicNextLink } from "@prismicio/next";
+import animation from "./animation.json";
+import circleLoader from "./circleLoader.json";
 
 type PhoneInputProps = {
   webhook_url: string;
@@ -13,6 +16,7 @@ type PhoneInputProps = {
   cta_text: KeyTextField;
   cta_placeholder_text?: KeyTextField;
   cta_error_message?: KeyTextField;
+  on_submit_redirect_url?: any;
 };
 
 const PhoneInput = ({
@@ -22,9 +26,12 @@ const PhoneInput = ({
   cta_text = "Do It",
   cta_placeholder_text = "your phone number",
   cta_error_message = "Not a valid Spanish Phone Number",
+  on_submit_redirect_url,
 }: PhoneInputProps) => {
+  const redirectLink = useRef(null);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [validPhoneNumber, setValidPhoneNumber] = useState(true);
+  const [sending, setSending] = useState(false);
   function handlePhoneInput(event: any) {
     event.preventDefault();
     setPhoneNumber(event.target.value);
@@ -52,6 +59,7 @@ const PhoneInput = ({
   }
   function handleSubmit() {
     if (validatePhoneNumber(phoneNumber)) {
+      setSending(true);
       fetch(webhook_url, {
         method: "POST",
         body: JSON.stringify({
@@ -63,9 +71,13 @@ const PhoneInput = ({
       })
         .then((res) => res.json())
         .then((data) => {
+          setSending(false);
           // console.log("response", data);
+          console.log("redirectLink", redirectLink);
+          if (redirectLink.current) redirectLink?.current?.click();
         })
         .catch((err) => {
+          setSending(false);
           console.error("error: failed to submit phone number");
         });
     }
@@ -113,7 +125,10 @@ const PhoneInput = ({
               {cta_text}
             </div>
             <div className="w-12 mobile:w-20 md:w-24">
-              <ArrowLottieAnimation color={cta_text_color || "#000000"} />
+              <ArrowLottieAnimation
+                color={cta_text_color || "#000000"}
+                animationData={sending ? circleLoader : animation}
+              />
             </div>
           </div>
         </div>
@@ -123,6 +138,10 @@ const PhoneInput = ({
           {cta_error_message}
         </div>
       )}
+      <PrismicNextLink
+        ref={redirectLink}
+        field={on_submit_redirect_url}
+      ></PrismicNextLink>
     </div>
   );
 };

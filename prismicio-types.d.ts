@@ -924,6 +924,16 @@ export interface HeroSliceDefaultPrimary {
   phone_number_input_error_message: prismic.KeyTextField;
 
   /**
+   * Phone CTA On Submit Redirect URL field in *Hero → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.phone_cta_on_submit_redirect_url
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  phone_cta_on_submit_redirect_url: prismic.LinkField;
+
+  /**
    * CTA Text Color field in *Hero → Primary*
    *
    * - **Field Type**: Color

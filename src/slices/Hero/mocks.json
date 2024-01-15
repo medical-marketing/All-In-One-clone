@@ -229,6 +229,13 @@
 				"__TYPE__": "FieldContent",
 				"value": "work",
 				"type": "Text"
+			},
+			"phone_cta_on_submit_redirect_url": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
 			}
 		},
 		"items": [

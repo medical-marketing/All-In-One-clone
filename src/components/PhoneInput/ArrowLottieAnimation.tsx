@@ -1,9 +1,8 @@
 "use client";
 import Lottie from "lottie-react";
-import animationData from "./animation.json";
 
 //@ts-ignore
-const ArrowLottieAnimation = ({ color }) => {
+const ArrowLottieAnimation = ({ color, animationData }) => {
   //@ts-ignore
   function updateAnimationColor(animationJSON, colorHex) {
     // Convert hex to rgba

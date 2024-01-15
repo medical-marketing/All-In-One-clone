@@ -106,6 +106,15 @@
             "placeholder": ""
           }
         },
+        "phone_cta_on_submit_redirect_url": {
+          "type": "Link",
+          "config": {
+            "label": "Phone CTA On Submit Redirect URL",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
         "cta_text_color": {
           "type": "Color",
           "config": {

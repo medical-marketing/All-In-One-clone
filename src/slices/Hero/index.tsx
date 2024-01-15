@@ -180,6 +180,9 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
                 cta_error_message={
                   slice.primary.phone_number_input_error_message
                 }
+                on_submit_redirect_url={
+                  slice.primary.phone_cta_on_submit_redirect_url
+                }
               />
             )}
             <AfterCtaText
