@@ -4,7 +4,25 @@ import Image from "next/image";
 import styles from "./phoneInput.module.css";
 import clsx from "clsx";
 import ArrowLottieAnimation from "./ArrowLottieAnimation";
-const PhoneInput = ({ webhook_url }: { webhook_url: string }) => {
+import { ColorField, KeyTextField } from "@prismicio/client";
+
+type PhoneInputProps = {
+  webhook_url: string;
+  cta_text_color: ColorField;
+  cta_background_color: ColorField;
+  cta_text: KeyTextField;
+  cta_placeholder_text?: KeyTextField;
+  cta_error_message?: KeyTextField;
+};
+
+const PhoneInput = ({
+  webhook_url,
+  cta_text_color,
+  cta_background_color,
+  cta_text = "Do It",
+  cta_placeholder_text = "your phone number",
+  cta_error_message = "Not a valid Spanish Phone Number",
+}: PhoneInputProps) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [validPhoneNumber, setValidPhoneNumber] = useState(true);
   function handlePhoneInput(event: any) {
@@ -53,49 +71,59 @@ const PhoneInput = ({ webhook_url }: { webhook_url: string }) => {
     }
   }
   return (
-    <div className="w-full px-4">
-      <div className="bg-[#e7e7e7] max-w-2xl w-full h-14 mx-auto rounded-full overflow-hidden">
+    <div className="w-full px-0 mobile:px-4">
+      <div className="bg-[#e7e7e7] max-w-2xl w-full h-10 mobile:h-12 md:h-14 mx-auto rounded-full overflow-hidden">
         <div className="flex h-full w-full">
-          <div className="mx-5 inline-block h-full pt-3">
+          <div className="w-20 flex items-center justify-center">
             <Image
               src="/form-hand.webp"
               alt="hello"
               height={42}
               width={42}
-              className={styles.shake}
+              className={clsx(
+                styles.shake,
+                "w-full max-w-[16px] mobile:max-w-[24px] md:max-w-[30px]"
+              )}
             ></Image>
           </div>
           <div className="w-full relative">
             <input
               className={clsx(
-                "h-full w-full bg-transparent text-xl",
+                "h-full w-full bg-transparent text-sm mobile:text-lg md:text-xl",
                 styles.input
               )}
               type="number"
               value={phoneNumber}
               onChange={handlePhoneInput}
               // onInput={handlePhoneInput}
-              placeholder="your phone number"
+              placeholder={cta_placeholder_text || "enter your phone number"}
             ></input>
-            {!validPhoneNumber && (
-              <div className="absolute bottom-0 text-sm text-red-500 text-center w-full">
-                Not a valid Spanish Phone Number
-              </div>
-            )}
           </div>
           <div
-            className="w-48 h-full bg-[#cff128] flex items-center cursor-pointer"
+            className="w-32 mobile:w-48 h-full flex items-center cursor-pointer"
+            style={{ backgroundColor: cta_background_color || "#cff128" }}
             onClick={handleSubmit}
           >
-            <div className="w-full text-xl text-center pl-3 text-black font-bold">
-              Do It
+            <div
+              className="w-full text-sm mobile:text-lg md:text-xl text-center mobile:pl-3 text-black font-bold"
+              style={{
+                color: cta_text_color || "#000000",
+                lineHeight: "clamp(14px,16px, 24px)",
+              }}
+            >
+              {cta_text}
             </div>
-            <div className="w-24">
-              <ArrowLottieAnimation />
+            <div className="w-12 mobile:w-20 md:w-24">
+              <ArrowLottieAnimation color={cta_text_color || "#000000"} />
             </div>
           </div>
         </div>
       </div>
+      {!validPhoneNumber && (
+        <div className="relative bottom-0 text-sm text-red-500 text-center w-full">
+          {cta_error_message}
+        </div>
+      )}
     </div>
   );
 };

@@ -85,6 +85,27 @@
             "placeholder": ""
           }
         },
+        "phone_number_input_webhook_url": {
+          "type": "Text",
+          "config": {
+            "label": "Phone Number Input Webhook URL",
+            "placeholder": ""
+          }
+        },
+        "phone_number_placeholder_text": {
+          "type": "Text",
+          "config": {
+            "label": "Phone Number Placeholder Text",
+            "placeholder": ""
+          }
+        },
+        "phone_number_input_error_message": {
+          "type": "Text",
+          "config": {
+            "label": "Phone Number Input Error Message",
+            "placeholder": ""
+          }
+        },
         "cta_text_color": {
           "type": "Color",
           "config": {
@@ -174,13 +195,6 @@
             "customtypes": [
               "background_of_small_images"
             ]
-          }
-        },
-        "phone_number_input_webhook_url": {
-          "type": "Text",
-          "config": {
-            "label": "Phone Number Input Webhook URL",
-            "placeholder": ""
           }
         }
       },

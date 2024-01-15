@@ -219,6 +219,16 @@
 				"__TYPE__": "FieldContent",
 				"value": "floor",
 				"type": "Text"
+			},
+			"phone_number_placeholder_text": {
+				"__TYPE__": "FieldContent",
+				"value": "hunter",
+				"type": "Text"
+			},
+			"phone_number_input_error_message": {
+				"__TYPE__": "FieldContent",
+				"value": "work",
+				"type": "Text"
 			}
 		},
 		"items": [

@@ -156,27 +156,37 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             <PrismicNextImage field={slice.primary.image} className="py-4" />
           </div>
           <div className="cta-div mt-8 md:mt-16 mx-auto max-w-xl ">
-            {slice.primary.cta_text?.length && (
-              <Button
+            {!slice.primary.phone_number_input_webhook_url?.length &&
+              slice.primary.cta_text?.length && (
+                <Button
+                  cta_text_color={slice.primary.cta_text_color}
+                  cta_background_color={slice.primary.cta_background_color}
+                  cta_style={slice.primary.cta_style}
+                  cta_link={slice.primary.cta_link}
+                  iframe={slice.primary.iframe}
+                >
+                  {slice.primary.cta_text}
+                </Button>
+              )}
+            {slice.primary.phone_number_input_webhook_url?.length && (
+              <PhoneInput
+                webhook_url={slice.primary.phone_number_input_webhook_url}
                 cta_text_color={slice.primary.cta_text_color}
                 cta_background_color={slice.primary.cta_background_color}
-                cta_style={slice.primary.cta_style}
-                cta_link={slice.primary.cta_link}
-                iframe={slice.primary.iframe}
-              >
-                {slice.primary.cta_text}
-              </Button>
+                cta_text={slice.primary.cta_text}
+                cta_placeholder_text={
+                  slice.primary.phone_number_placeholder_text
+                }
+                cta_error_message={
+                  slice.primary.phone_number_input_error_message
+                }
+              />
             )}
             <AfterCtaText
               field={slice.primary.after_cta_text}
               color={slice.primary.sub_header_color}
             />
           </div>
-          {slice.primary.phone_number_input_webhook_url?.length && (
-            <PhoneInput
-              webhook_url={slice.primary.phone_number_input_webhook_url}
-            />
-          )}
         </div>
         <div className="key-points-div mt-8 flex justify-center gap-8 flex-wrap">
           {slice.items.map(({ key_point_image }, index) => (

@@ -894,6 +894,36 @@ export interface HeroSliceDefaultPrimary {
   cta_text: prismic.KeyTextField;
 
   /**
+   * Phone Number Input Webhook URL field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.phone_number_input_webhook_url
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_number_input_webhook_url: prismic.KeyTextField;
+
+  /**
+   * Phone Number Placeholder Text field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.phone_number_placeholder_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_number_placeholder_text: prismic.KeyTextField;
+
+  /**
+   * Phone Number Input Error Message field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.phone_number_input_error_message
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_number_input_error_message: prismic.KeyTextField;
+
+  /**
    * CTA Text Color field in *Hero → Primary*
    *
    * - **Field Type**: Color
@@ -993,16 +1023,6 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   background_of_small_images: prismic.ContentRelationshipField<"background_of_small_images">;
-
-  /**
-   * Phone Number Input Webhook URL field in *Hero → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.phone_number_input_webhook_url
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  phone_number_input_webhook_url: prismic.KeyTextField;
 }
 
 /**
