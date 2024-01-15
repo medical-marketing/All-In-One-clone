@@ -105,10 +105,9 @@ const PhoneInput = ({
             onClick={handleSubmit}
           >
             <div
-              className="w-full text-sm mobile:text-lg md:text-xl text-center mobile:pl-3 text-black font-bold"
+              className="w-full text-sm mobile:text-lg md:text-xl text-center mobile:pl-3 text-black font-bold line-clamp-3 !leading-3 mobile:!leading-4 md:!leading-5"
               style={{
                 color: cta_text_color || "#000000",
-                lineHeight: "clamp(14px,16px, 24px)",
               }}
             >
               {cta_text}
