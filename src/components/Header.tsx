@@ -43,7 +43,7 @@ export default async function Header({ uid }: HeaderParams) {
             </Link>
           </div>
           <PrismicNextLink field={cta_link}>
-            <div className="cta h-fit">
+            <div className="cta h-fit header-phone">
               <div className="flex items-center gap-2 xs:gap-3">
                 <div className="block">
                   <PrismicNextImage
