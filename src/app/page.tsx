@@ -53,8 +53,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     //@ts-ignore
-    title: page.data.meta_title,
+    title: page.data.meta_title || "untitled",
     //@ts-ignore
-    description: page.data.meta_description,
+    description: page.data.meta_description || "fallback page description",
   };
 }
