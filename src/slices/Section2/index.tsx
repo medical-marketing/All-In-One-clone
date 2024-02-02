@@ -174,7 +174,7 @@ const Section2 = ({ slice }: Section2Props): JSX.Element => {
         </Bounded>
       </div>
     );
-  } else if (slice.variation == "pointBlocks") {
+  } else {
     return (
       <div className="relative">
         <PrismicNextImage

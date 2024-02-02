@@ -31,7 +31,7 @@
     "react-bootstrap": "^2.9.1",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^18",
-    "styled-components": "^6.1.6"
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.31",

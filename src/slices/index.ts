@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 export const components = {
   comparison: dynamic(() => import("./Comparison")),
   hero: dynamic(() => import("./Hero")),
+  iframe: dynamic(() => import("./Iframe")),
   reviews: dynamic(() => import("./Reviews")),
   section1: dynamic(() => import("./Section1")),
   section2: dynamic(() => import("./Section2")),

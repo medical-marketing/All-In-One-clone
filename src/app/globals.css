@@ -23,10 +23,8 @@ ul {
 ul > li::before {
   content: "\2713";
   margin-right: 0.5em;
-  padding: 0.5px 4px;
-  padding-top: 2.25px;
-  background-color: #d1ac57;
-  border-radius: 50px;
+  padding: 4px 10px;
+  border-radius: 1000px;
   color: white;
 }
 

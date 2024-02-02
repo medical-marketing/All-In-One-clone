@@ -26,9 +26,7 @@
         "config": {
           "label": "Header",
           "select": "document",
-          "customtypes": [
-            "header"
-          ]
+          "customtypes": ["header"]
         }
       },
       "footer": {
@@ -36,9 +34,7 @@
         "config": {
           "label": "Footer",
           "select": "document",
-          "customtypes": [
-            "footer"
-          ]
+          "customtypes": ["footer"]
         }
       },
       "slices": {
@@ -46,6 +42,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "iframe": {
+              "type": "SharedSlice"
+            },
             "comparison": {
               "type": "SharedSlice"
             },

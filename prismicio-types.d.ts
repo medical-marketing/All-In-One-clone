@@ -310,6 +310,7 @@ export type IframeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<IframeDocumentData>, "iframe", Lang>;
 
 type LandingPageDocumentDataSlicesSlice =
+  | IframeSlice
   | ComparisonSlice
   | Section2Slice
   | Section3Slice
@@ -1099,6 +1100,48 @@ type HeroSliceVariation = HeroSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *Iframe → Primary*
+ */
+export interface IframeSliceDefaultPrimary {
+  /**
+   * iFrame field in *Iframe → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: iframe.primary.iframe
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  iframe: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Iframe Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IframeSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<IframeSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Iframe*
+ */
+type IframeSliceVariation = IframeSliceDefault;
+
+/**
+ * Iframe Shared Slice
+ *
+ * - **API ID**: `iframe`
+ * - **Description**: Iframe
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IframeSlice = prismic.SharedSlice<"iframe", IframeSliceVariation>;
 
 /**
  * Primary content in *Reviews → Primary*
@@ -2159,6 +2202,10 @@ declare module "@prismicio/client" {
       HeroSliceDefaultItem,
       HeroSliceVariation,
       HeroSliceDefault,
+      IframeSlice,
+      IframeSliceDefaultPrimary,
+      IframeSliceVariation,
+      IframeSliceDefault,
       ReviewsSlice,
       ReviewsSliceDefaultPrimary,
       ReviewsSliceDefaultItem,

@@ -1,0 +1,14 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"iframe": {
+				"__TYPE__": "FieldContent",
+				"value": "arm",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

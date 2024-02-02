@@ -1,4 +1,5 @@
 import type { Metadata, ResolvingMetadata, Viewport } from "next";
+import StyledComponentsRegistry from "@/lib/registry";
 
 import "./globals.css";
 import clsx from "clsx";
@@ -86,7 +87,7 @@ export default async function RootLayout({
         <StyledBody bold_text_color={bold_text_color}>
           <Providers>
             <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
-            {children}
+            <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
             {cookie_and_privacy_policy_consent !== false && (
               <CookieConsentComp
                 terms_and_conditions_link={privacy_policy_link}
