@@ -4,6 +4,7 @@ import { Carousel } from "react-bootstrap";
 import "./Bootstrap-minimum.css";
 import styles from "./Bootstrap.module.css";
 import { JSXMapSerializer, PrismicRichText } from "@prismicio/react";
+import clsx from "clsx";
 
 type componentsType = ({}: any) => JSXMapSerializer;
 
@@ -54,7 +55,11 @@ export default function BootstrapCarousel({ items, color }: any) {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {items.map(({ testimonial, name }: any, i: number) => (
-        <Carousel.Item key={i} className={styles.itemP} interval={4000}>
+        <Carousel.Item
+          key={i}
+          className={clsx(styles.itemP, "h-[35rem] mobile:h-[25rem]")}
+          interval={4000}
+        >
           {/* <img src={item.imageUrl} alt="slides" /> */}
           <Carousel.Caption className={styles.caption}>
             <div className="mb-8">
