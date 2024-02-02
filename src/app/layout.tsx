@@ -12,6 +12,7 @@ import { PrismicPreview } from "@prismicio/next";
 import { Providers } from "@/app/providers";
 import { TrackingHeadScript } from "@phntms/next-gtm";
 import { getSettings } from "@/app/utils";
+import CookieConsentComp from "@/components/clientComponents/CookieConsentComp";
 
 const body = Nunito_Sans({
   subsets: ["latin"],
@@ -70,8 +71,14 @@ export default async function RootLayout({
     primary_color,
     secondary_color,
     bold_text_color,
+    privacy_policy_link,
+    cookie_and_privacy_policy_consent,
     gtm_id: GTM_ID,
   } = settings.data;
+  console.log(
+    "cookie and privacy policy consent",
+    cookie_and_privacy_policy_consent
+  );
 
   return (
     <html lang="en">
@@ -80,6 +87,11 @@ export default async function RootLayout({
           <Providers>
             <TrackingHeadScript id={GTM_ID || ""} isGTM={true} />
             {children}
+            {cookie_and_privacy_policy_consent !== false && (
+              <CookieConsentComp
+                terms_and_conditions_link={privacy_policy_link}
+              />
+            )}
           </Providers>
         </StyledBody>
         <PrismicPreview repositoryName={repositoryName} />

@@ -572,6 +572,29 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#boolean
    */
   block_indexing_by_search_engines: prismic.BooleanField;
+
+  /**
+   * Privacy Policy Link field in *Settings*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.privacy_policy_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  privacy_policy_link: prismic.LinkField;
+
+  /**
+   * Cookie and Privacy Policy Consent field in *Settings*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: true
+   * - **API ID Path**: settings.cookie_and_privacy_policy_consent
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  cookie_and_privacy_policy_consent: prismic.BooleanField;
 }
 
 /**

@@ -117,6 +117,23 @@
           "placeholder_true": "true",
           "default_value": true
         }
+      },
+      "privacy_policy_link": {
+        "type": "Link",
+        "config": {
+          "label": "Privacy Policy Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "cookie_and_privacy_policy_consent": {
+        "type": "Boolean",
+        "config": {
+          "label": "Cookie and Privacy Policy Consent",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": true
+        }
       }
     }
   }
