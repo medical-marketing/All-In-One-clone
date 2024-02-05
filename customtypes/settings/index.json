@@ -118,14 +118,6 @@
           "default_value": true
         }
       },
-      "privacy_policy_link": {
-        "type": "Link",
-        "config": {
-          "label": "Privacy Policy Link",
-          "placeholder": "",
-          "select": null
-        }
-      },
       "cookie_and_privacy_policy_consent": {
         "type": "Boolean",
         "config": {
@@ -133,6 +125,15 @@
           "placeholder_false": "false",
           "placeholder_true": "true",
           "default_value": true
+        }
+      },
+      "cookie_consent_content": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Cookie Consent Content",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,strong,em,hyperlink"
         }
       }
     }

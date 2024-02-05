@@ -72,7 +72,7 @@ export default async function RootLayout({
     primary_color,
     secondary_color,
     bold_text_color,
-    privacy_policy_link,
+    cookie_consent_content,
     cookie_and_privacy_policy_consent,
     gtm_id: GTM_ID,
   } = settings.data;
@@ -90,7 +90,7 @@ export default async function RootLayout({
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
             {cookie_and_privacy_policy_consent !== false && (
               <CookieConsentComp
-                terms_and_conditions_link={privacy_policy_link}
+                cookie_consent_content={cookie_consent_content}
               />
             )}
           </Providers>
