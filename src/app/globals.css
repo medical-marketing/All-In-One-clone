@@ -43,20 +43,20 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-@keyframes shake {
+/* @keyframes shake {
   10% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   20% {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(10deg);
   }
 
   40% {
-    -webkit-transform: rotate(-20deg);
-    transform: rotate(-20deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
 
   50% {
@@ -78,12 +78,35 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
   }
-}
+} */
 
+@keyframes tilt-shaking {
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  100% {
+    transform: rotate(0deg);
+  }
+  15%,
+  25% {
+    transform: rotate(5deg);
+  }
+  25%,
+  35% {
+    transform: rotate(-5deg);
+  }
+}
+.header-phone img,
+.header-phone svg {
+  transition: all 0.1s ease-in-out;
+}
 .header-phone:hover img,
 .header-phone:hover svg {
-  -webkit-animation: shake 1.5s;
-  animation: shake 1.5s;
+  scale: 1.1;
+  -webkit-animation: shake 1.5s infinite;
+  animation: tilt-shaking 1.5s infinite;
 }
 
 .CookieConsent a {
