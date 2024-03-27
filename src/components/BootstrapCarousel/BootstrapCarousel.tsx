@@ -57,7 +57,7 @@ export default function BootstrapCarousel({ items, color }: any) {
       {items.map(({ testimonial, name }: any, i: number) => (
         <Carousel.Item
           key={i}
-          className={clsx(styles.itemP, "h-[35rem] mobile:h-[25rem]")}
+          className={clsx(styles.itemP, "h-[40rem] mobile:h-[25rem]")}
           interval={4000}
         >
           {/* <img src={item.imageUrl} alt="slides" /> */}
