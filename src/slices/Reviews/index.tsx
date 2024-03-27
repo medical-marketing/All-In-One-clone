@@ -118,6 +118,7 @@ const Reviews = ({ slice }: ReviewsProps): JSX.Element => {
       )}
       <Bounded
         as="div"
+        className="!px-0"
         data-slice-type={slice.slice_type}
         data-slice-variation={slice.variation}
       >
